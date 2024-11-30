@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client & Orders Management</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+  <div class="container my-5">
+    <h1 class="text-center mb-4">Client & Orders Management</h1>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Clients</h2>
+        <ul class="list-group mb-3" id="client-list"></ul>
+        <form id="add-client-form" class="mb-3">
+          <div class="input-group">
+            <input type="text" id="client-name" class="form-control" placeholder="Client Name" required>
+            <input type="email" id="client-email" class="form-control" placeholder="Client Email" required>
+            <button type="submit" class="btn btn-primary">Add Client</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-md-6">
+        <h2>Orders</h2>
+        <ul class="list-group mb-3" id="order-list"></ul>
+        <form id="add-order-form">
+          <div class="input-group">
+            <select id="client-select" class="form-select" required>
+              <option value="" disabled selected>Select Client</option>
+            </select>
+            <input type="text" id="order-product" class="form-control" placeholder="Product Name" required>
+            <input type="number" id="order-quantity" class="form-control" placeholder="Quantity" required>
+            <button type="submit" class="btn btn-success">Add Order</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="./src/clientController.js"></script>
+  <script src="./src/orderController.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
